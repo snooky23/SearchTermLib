@@ -1,6 +1,5 @@
 package com.avilevin.searchterm.twitter;
 
-import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.UnsupportedEncodingException;
@@ -13,7 +12,7 @@ import java.net.URLEncoder;
 
 public class Utilities {
 
-    private static final char HASHTAG = '#';
+    static final char HASHTAG = '#';
     private static final String LOGTAG = "SEARCHTERM";
 
     public static String encodeStringUTF8(String stringToEncode) {
@@ -41,7 +40,7 @@ public class Utilities {
     public static String stringToHashTag(String string) {
         String stringWithHashTag;
 
-        if(!TextUtils.isEmpty(string)) {
+        if(string!=null && !string.isEmpty()) {
             if(string.charAt(0) == HASHTAG) {
                 stringWithHashTag = string;
             } else {
