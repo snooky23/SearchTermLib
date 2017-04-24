@@ -1,1 +1,1 @@
-include ':searchapi'
+include ':searchterm'
